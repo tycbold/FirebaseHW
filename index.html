@@ -135,7 +135,7 @@
         }
         database.ref().push(schedule);
       
-      database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+      database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
         var mysnapshot = "snapshot :";
         
         console.log(mysnapshot, snapshot.val());
